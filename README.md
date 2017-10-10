@@ -6,8 +6,8 @@ Repo for the Coursera course "Getting and Cleaning Data"
 #1
 it loads some data
 1. features of the measurements (features)
-2. test_data (subjects, input (x_test), output (y_test), names)
-3. train_data (subjects, input (x_train), output (y_train), names)
+2. test_data (subjects, input (measurements_test), output (activity_test), names)
+3. train_data (subjects, input (measurements_train), output (activity_train), names)
 - subjects: people in the experiment
 - input: all the measured features
 - output: the activity (walking, sitting, laying, etc.)
