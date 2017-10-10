@@ -11,29 +11,25 @@ it loads some data
 - subjects: people in the experiment
 - input: all the measured features
 - output: the activity (walking, sitting, laying, etc.)
-- names: from what dataset it is coming (test/train)
 4. mapping table of the activities (1-6)
 
 #2
-it merges the test and train data into complete_data
+it merges the test and train data into complete_dataset
 
 #3
-it runs some standard calculations
+it extracts columns with:
 1. mean (mean)
 2. standard deviation (stdev)
 
 #4
-it maps the descriptive activities to the data
-1. merging mapping table
-2. substitute 'numbered activity column' with 'descriptive activity column' 
-3. delete obsolete column
+it maps the descriptive measurements to the data column names
+1. freq = Frequency; std = Std.Dev; Mag = Magnitude; t = Time.Domain; f = Frequency.Domain
+2. add 'descriptive activity column' [activity_description] by mapping with 'numbered activity column' [activity]
+3. delete obsolete column [activity]
 
 #5 
 calculations of mean per feature per person
-1. split dataframe columns into two dataframes
-2. keep 'subject' and 'activity' in each column
-3. run calculation 'mean' with aggregate function on both resulting columns DF1, DF2
-4. combine summarized dataframes (m1, m2) except for double columns ('subject', 'activity')
+3. run calculation 'mean' with aggregate function on dataset
 
 #6
 write tidy_data to txt file
